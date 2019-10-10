@@ -129,13 +129,13 @@ public class RNIronSourceRewardedVideoModule extends ReactContextBaseJavaModule 
     }
 
     @ReactMethod
-    public void isRewardedVideoAvailable(Promise result) {
+    public void isRewardedVideoAvailable(Promise promise) {
       try {
-        Log.d(Tag, "isRewardedVideo() called!!");
-        promise.resolve(IronSource.isRewardedVideoAvailable);
+        Log.d(TAG, "isRewardedVideo() called!!");
+        promise.resolve(IronSource.isRewardedVideoAvailable());
       }
       catch (Exception e) {
-        Log.d(Tag, "isRewardedVideo error %s", e);
+        Log.d(TAG, "isRewardedVideo error %s", e);
         promise.reject("isRewardedVideoAvailable, Error, " + e);
       }
     }
