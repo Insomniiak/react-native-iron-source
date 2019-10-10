@@ -64,7 +64,7 @@ RCT_EXPORT_METHOD(showRewardedVideo:(NSString*)placementName)
     }
 }
 
-RCT_EXPORT_METHOD(isRewardedVideoAvailable:(RCTPromiseResolveBlock)resolve reject(RCTPromiseRejectBlock)reject)
+RCT_EXPORT_METHOD(isRewardedVideoAvailable:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 {
   @try {
     resolve([IronSource hasRewardedVideo]);
