@@ -129,6 +129,11 @@ public class RNIronSourceRewardedVideoModule extends ReactContextBaseJavaModule 
     }
 
     @ReactMethod
+    public boolean isRewardedVideoAvailable() {
+      return IronSource.isRewardedVideoAvailable();
+    }
+
+    @ReactMethod
     public void setDynamicUserId(String userId) {
         IronSource.setDynamicUserId(userId);
     }

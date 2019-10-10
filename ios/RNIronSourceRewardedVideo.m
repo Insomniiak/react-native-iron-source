@@ -64,6 +64,11 @@ RCT_EXPORT_METHOD(showRewardedVideo:(NSString*)placementName)
     }
 }
 
+RCT_EXPORT_METHOD((BOOL)isRewardedVideoAvailable)
+{
+  return [IronSource hasRewardedVideo];
+}
+
 RCT_EXPORT_METHOD(setDynamicUserId:(NSString*)userId)
 {
     [IronSource setDynamicUserId:userId];
